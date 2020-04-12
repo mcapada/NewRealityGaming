@@ -1,0 +1,33 @@
+﻿@model MvcGames.Models.Game
+
+@{
+    ViewData["Title"] = "Play Now!";
+}
+
+<div>
+    <hr />
+    <div style="margin: 0 auto" class="miniclip-game-embed" data-game-name="monkey-kick" data-theme="5" data-width="800" data-height="800" data-language="en"><a href="https://www.miniclip.com/games/monkey-kick/">Play Monkey Kick</a></div>
+    <h1>@Html.DisplayFor(model => model.Title)</h1>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <!--To Edit Later-->
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script src="//static.miniclipcdn.com/js/game-embed.js"></script>
